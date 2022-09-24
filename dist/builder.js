@@ -59,5 +59,22 @@ class Builder {
             return result;
         });
     }
+    fetchWithToken(baseURL, access_token) {
+        return __awaiter(this, void 0, void 0, function* () {
+            const directus = axios_1.default.create({ baseURL });
+            directus.defaults.headers.common = {
+                Authorization: `Bearer ${access_token}`
+            };
+            const { collections, relations } = this.render();
+            const then = ({ data: { data } }) => data;
+            const error = ({ response: { data } }) => data;
+            const result = {
+                collections: yield directus.post("collections", collections).then(then).catch(error),
+                relations: yield Promise.all(relations.map((relation) => directus.post("relations", relation).then(then).catch(error)))
+            };
+            yield directus.post("/utils/cache/clear");
+            return result;
+        });
+    }
 }
 exports.Builder = Builder;

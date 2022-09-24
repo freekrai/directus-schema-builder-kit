@@ -126,6 +126,18 @@ model.fetch(baseURL, email, password).then(({ collections, relations }) => {
 });
 ```
 
+## Or You can use your access token:
+
+```javascript
+const baseURL = "http://localhost:8080";
+const token = "ACCESS-TOKEN";
+
+model.withWithToken(baseURL, token).then(({ collections, relations }) => {
+  console.log(JSON.stringify(collections, null, 2));
+  console.log(JSON.stringify(relations, null, 2));
+});
+```
+
 
 ### Credits
 

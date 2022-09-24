@@ -65,4 +65,29 @@ export class Builder {
 
     return result;
   }
+
+  async fetchWithToken(baseURL: string, access_token: string) {
+    const directus = axios.create({ baseURL });
+
+    directus.defaults.headers.common = {
+      Authorization: `Bearer ${access_token}`
+    };
+
+    const { collections, relations } = this.render();
+
+    const then = ({ data: { data } }: { data: any }) => data;
+    const error = ({ response: { data } }: { response: any }) => data;
+
+    const result = {
+      collections: await directus.post("collections", collections).then(then).catch(error),
+
+      relations: await Promise.all(
+        relations.map((relation) => directus.post("relations", relation).then(then).catch(error))
+      )
+    };
+
+    await directus.post("/utils/cache/clear");
+
+    return result;
+  }
 }
