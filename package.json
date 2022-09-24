@@ -25,15 +25,15 @@
     "axios": "^0.24.0"
   },
   "author": {
-    "name": "Alejandro Castaño González",
-    "email": "alejandro@theseedsquad.com",
-    "url": "https://theseedsquad.com"
+    "name": "Roger Stringer",
+    "email": "roger@datamcfly.com",
+    "url": "https://datamcfly.com"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/directus-community/schema-builder-kit.git"
+    "url": "git+https://github.com/freekrai/schema-builder-kit.git"
   },
-  "homepage": "https://github.com/directus-community/schema-builder-kit#readme",
+  "homepage": "https://github.com/freekrai/schema-builder-kit#readme",
   "license": "MIT",
   "keywords": [
     "directus"
