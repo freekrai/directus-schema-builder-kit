@@ -1,6 +1,6 @@
 {
   "name": "new-directus-schema-builder-kit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Create the data model for directus programmatically",
   "main": "dist/index.js",
   "files": [
