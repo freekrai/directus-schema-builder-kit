@@ -125,3 +125,8 @@ model.fetch(baseURL, email, password).then(({ collections, relations }) => {
   console.log(JSON.stringify(relations, null, 2));
 });
 ```
+
+
+### Credits
+
+Forked from [https://github.com/directus-community/schema-builder-kit](https://github.com/directus-community/schema-builder-kit), with some updates added.

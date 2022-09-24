@@ -1,6 +1,6 @@
 {
   "name": "new-directus-schema-builder-kit",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Create the data model for directus programmatically",
   "main": "dist/index.js",
   "files": [
@@ -31,9 +31,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/freekrai/schema-builder-kit.git"
+    "url": "git+https://github.com/freekrai/directus-schema-builder-kit.git"
   },
-  "homepage": "https://github.com/freekrai/schema-builder-kit#readme",
+  "homepage": "https://github.com/freekrai/directus-schema-builder-kit#readme",
   "license": "MIT",
   "keywords": [
     "directus"
