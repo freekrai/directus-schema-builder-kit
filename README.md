@@ -4,6 +4,20 @@ This repository is a proof of concept for creating data models for directus prog
 
 ## Quickstart Guide
 
+### Install via package manager of choice:
+
+```
+yarn add new-directus-schema-builder-kit
+```
+
+or 
+
+```
+npm install new-directus-schema-builder-kit
+```
+
+### From Source:
+
 1. Install packages: `make install` or `npm i && cd templates && npm i`
 2. Build package: `make build` or `npm run build`
 3. Run directus: `make docker-compose` or `docker-compose up -d`
